@@ -1,0 +1,73 @@
+%Libraries
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+
+%Delimiters
+\newcommand{\pred}[1]{\left( #1 \right)} %parentheses
+\newcommand{\pcuad}[1]{\left[ #1 \right]} %corchetes
+\newcommand{\llav}[1]{\left\{ #1 \right\}} %llaves
+\newcommand{\pac}[1]{\langle #1 \rangle} %greaterlessthan
+
+
+
+%Operators
+\newcommand{\suma}[3]{\sum_{#2}^{#3} \left\{ #1 \right\}} %Sigma sum
+\newcommand{\pprod}[3]{\prod_{#2}^{#3}\left\{ #1 \right\} } %Product
+\newcommand{\ssen}[2][]{{\text{sen}}^{#1}\left(#2\right)} %sen function 
+\newcommand{\ccos}[2][]{{\cos}^{#1}\left(#2\right)} %cos function 
+\newcommand{\ttan}[2][]{{\tan}^{#1}\left(#2\right)} %tan function 
+\newcommand{\ccot}[2][]{{\cot}^{#1}\left(#2\right)} %cot function 
+\newcommand{\ssec}[2][]{{\sec}^{#1}\left(#2\right)} %tan function 
+\newcommand{\ccsc}[2][]{{\csc}^{#1}\left(#2\right)} %cot function 
+\newcommand{\eexp}[1]{{e}^{#1}} %Exponential
+\newcommand{\gf}[1]{\Gamma\left(#1\right)} %Gamma Function
+\newcommand{\llim}[3]{\lim\limits_{#2\to #3}\left\{#1\right\}} %Limit Operator
+\newcommand{\squa}[1]{{#1}^{2}} %Squared 
+\newcommand{\prim}[1]{{#1}^{\prime}} %Prime
+\newcommand{\dint}[4]{\int\limits_{#2=#3}^{#4}#1\; d#2} %definite integral
+
+
+
+%Simple commands
+\newcommand{\subi}[2]{{#1}_{#2}} % subindice
+\newcommand{\supi}[2]{{#1}^{#2}} %superindice
+\newcommand{\ntxt}[1]{\ \text{#1}\ } %normal text in math environment
+\newcommand{\abs}[1]{\left| #1 \right|} %Absolute Value
+\newcommand{\eval}[3]{\left. #1\right|_{#2}^{#3}} %evaluation line
+\newcommand{\depredador}[1]{\therefore\ \boxed{#1}} %Boxed answer
+\newcommand{\rre}{\mathbb{R}} %Reals
+\newcommand{\lint}[2]{\underline{\int}_{#2}#1} %Lower Integral
+\newcommand{\uint}[2]{\overline{\int}_{#2}#1} %Upper Integral
+\newcommand{\fun}[3]{#1\colon #2\to #3} %Function DomImg
+
+
+%Vectorial Commands
+\newcommand{\vct}[1]{\mathbf{#1}} %Bold vector 
+\newcommand{\norm}[1]{\left|\left| #1 \right|\right|} %vector norm
+\newcommand{\cvct}[4]{#1={#2}{\widehat{e}}_{x}{#3}{\widehat{e}}_{y}{#4}{\widehat{e}}_{z}} %Cartesian coordinates vector
+\newcommand{\civct}[4]{#1={#2}{\widehat{e}}_{r}{#3}{\widehat{e}}_{\theta}{#4}{\widehat{e}}_{z}} %Cilindrical coordinates vector
+\newcommand{\csvct}[4]{#1={#2}{\widehat{e}}_{r}{#3}{\widehat{e}}_{\theta}{#4}{\widehat{e}}_{\varphi}} %Sperical coordinates vector 
+\newcommand{\dprod}[2]{#1\cdot #2} %dot product
+\newcommand{\cprod}[2]{#1\times #2} %cross product
+\newcommand{\grad}{\nabla} %gradient
+\newcommand{\ddiv}{\nabla\cdot} %divergence
+\newcommand{\rot}{\nabla\times} %curl
+\newcommand{\lap}{{\nabla}^{2}} %Laplacian
+\newcommand{\dal}{{\square}^{2}} %D'Alembert
+
+
+
+%Tensorial Commands
+\newcommand{\gvct}[4]{#1=#2{\widehat{e}}_{1} #3{\widehat{e}}_{2} #3{\widehat{e}}_{3}}%general vector
+\newcommand{\dkr}[1]{{\delta}_{#1}} %Delta de Kronecker
+\newcommand{\ddir}[1]{\delta\left( #1 \right)}%Dirac's Delta
+\newcommand{\choky}[1]{{\epsilon}_{#1}} %Levi-Civita
+
+
+
+%Optional commands, the optional command is \newcommand{name}[args][default]{command}
+\newcommand{\pder}[2][\;]{{\partial}^{#1}_{{#2}^{#1}} } %partial derivate
+\newcommand{\tder}[2][\;]{\frac{{d}^{#1}}{d{#2}^{#1}}} %total derivate

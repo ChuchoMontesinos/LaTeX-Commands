@@ -1,0 +1,66 @@
+%Packages
+\usepackage{hyperref} %For links in the tableoofcontents
+\usepackage{amsmath} %Theorem environment
+\usepackage{amssymb}%Symbols
+\usepackage[nothm]{thmbox} %For proof and solution 
+\usepackage{import}%Insert figures
+\usepackage{adjustbox}%Insert figures
+\usepackage{graphicx}%Insert figures
+\usepackage{multicol}%Columns
+
+
+%Numerated environments with no cursive
+%Theorems
+%We need to put \usepackage{amsthm} in the document where we are working
+\theoremstyle{definition}
+\newtheorem{Def}{Definition}[subsection]
+\newtheorem{Teo}{Theorem}[subsection]
+\newtheorem{Exa}{Ejemplo}[subsection]
+\newtheorem{Lem}{Lemma}[subsection]
+\newtheorem{Cor}{Corollary}[subsection]
+\newtheorem{Nota}{Nota}[subsection]
+\newtheorem{Pro}{Proposition}[subsection]
+\newtheorem{Exe}{Exercise}[subsection]
+
+%Links in tableofcontents
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%Proofs environment
+\newenvironment{Dem}{\begin{thmbox}[M]{{\it Demostración}}
+        }{
+        \\Q.E.D.
+    \end{thmbox}
+}
+
+%Solution environment
+\newenvironment{Sol}{\begin{thmbox}[S]{{\it Solución}}
+        }{
+    \end{thmbox}
+}
+
+%Insert pdf_tex Figure
+\newcommand{\itfig}[3]{
+    \begin{figure}[!h]
+        \centering
+        \input{#1.pdf_tex}
+        \caption{#3}
+        \label{Fig: #2}
+
+    \end{figure}
+}
+
+%Insert Figure 
+\newcommand{\ifig}[4]{
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=#1 cm]{#2}
+        \caption{#3}
+        \label{Fig: #4}
+    \end{figure}
+}
